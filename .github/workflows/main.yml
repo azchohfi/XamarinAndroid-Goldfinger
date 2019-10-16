@@ -12,6 +12,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Display the path
+    - name: Build the library
       run: build.bat
       shell: cmd
