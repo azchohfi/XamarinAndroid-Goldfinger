@@ -15,3 +15,7 @@ jobs:
     - name: Build the library
       run: build.bat
       shell: cmd
+    - uses: actions/upload-artifact@master
+      with:
+        name: XamarinAndroidGoldfingerNugetPackage
+        path: ./XamarinAndroid.Goldfinger/*.nupkg
