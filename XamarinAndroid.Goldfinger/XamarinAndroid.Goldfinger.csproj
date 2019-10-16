@@ -26,7 +26,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <DesignTimeBuild Condition=" '$(DesignTimeBuild)' == '' ">false</DesignTimeBuild>
-	<PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">./</PackageOutputPath>
+	<PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">./nupkg/</PackageOutputPath>
 	<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
