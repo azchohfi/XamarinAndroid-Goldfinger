@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">XamarinAndroid.Goldfinger.SampleApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="status">Status:\nType [%1$s]\nReason [%2$s]\nValue [%3$s]\nMessage [%4$s]</string>
+</resources>

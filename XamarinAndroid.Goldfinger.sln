@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinAndroid.Goldfinger", "XamarinAndroid.Goldfinger\XamarinAndroid.Goldfinger.csproj", "{6A876E55-BF19-4DE9-9BF1-2CD1B6B9D4E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinAndroid.Goldfinger.SampleApp", "XamarinAndroid.Goldfinger.SampleApp\XamarinAndroid.Goldfinger.SampleApp.csproj", "{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.Biometric", "AndroidX.Biometric\AndroidX.Biometric.csproj", "{79ECFB06-2CEA-4A3C-97FB-029ADE3976F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A876E55-BF19-4DE9-9BF1-2CD1B6B9D4E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A876E55-BF19-4DE9-9BF1-2CD1B6B9D4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A876E55-BF19-4DE9-9BF1-2CD1B6B9D4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A876E55-BF19-4DE9-9BF1-2CD1B6B9D4E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2CA1FFD-FDA6-4015-9CAF-00691C93ABF1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{79ECFB06-2CEA-4A3C-97FB-029ADE3976F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79ECFB06-2CEA-4A3C-97FB-029ADE3976F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79ECFB06-2CEA-4A3C-97FB-029ADE3976F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79ECFB06-2CEA-4A3C-97FB-029ADE3976F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CD88279-6A85-4C50-9080-F870CAD25040}
+	EndGlobalSection
+EndGlobal
