@@ -31,4 +31,5 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: Nuget Push
-      run: nuget push -source https://api.nuget.org/v3/index.json *.nupkg -ApiKey "${{ secrets.NUGET_API_KEY }}"
+      run: Get-ChildItem -Path .\ -Filter XamarinAndroid.Goldfinger.*.nupkg -Recurse -File | Foreach { nuget push -source https://api.nuget.org/v3/index.json $_.Name -ApiKey "${{ secrets.NUGET_API_KEY }}"}
+      shell: pwsh
