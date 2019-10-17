@@ -4,12 +4,12 @@ on:
   push:
     branches: 
       - master
+    tags:
+      - rel/*
 
 jobs:
   build:
-
     runs-on: windows-latest
-    
     steps:
     - uses: actions/checkout@v1
     - name: Build the library
@@ -19,3 +19,15 @@ jobs:
       with:
         name: XamarinAndroidGoldfingerNugetPackage
         path: ./XamarinAndroid.Goldfinger/nupkg
+
+  publish:
+    runs-on: windows-latest
+    if: startsWith(github.ref, 'ref/tags/rel/')
+    steps:
+    - uses: actions/download-artifact@master
+      with:
+        name: XamarinAndroidGoldfingerNugetPackage
+    - name: Setup Nuget.exe
+      uses: warrenbuckley/Setup-Nuget@v1
+    - name: Nuget Push
+      run: nuget push *.nupkg -ApiKey "${{ secrets.NUGET_API_KEY }}"
