@@ -19,22 +19,22 @@
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <PackageId>XamarinAndroid.Goldfinger</PackageId>
-    <Version>2.0.0-RC2.1</Version>
+    <Version>2.0.0</Version>
     <Authors>azchohfi</Authors>
-	<PackageDescription>Xamarin Android Binding package for Infinum's Android Goldfinger, to simplify fingerprint authentication implementation.</PackageDescription>
-	<PackageTags>xamarin;android;binding;infinum;goldfinger;fingerprint;auth;authentication</PackageTags>
-	<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/azchohfi/XamarinAndroid-Goldfinger</PackageProjectUrl>
-	<PackageIcon>icon.png</PackageIcon>
-	<PackageIconUrl>http://i.imgur.com/toKPCaB.png</PackageIconUrl>
+    <PackageDescription>Xamarin Android Binding package for Infinum's Android Goldfinger, to simplify fingerprint authentication implementation.</PackageDescription>
+    <PackageTags>xamarin;android;binding;infinum;goldfinger;fingerprint;auth;authentication</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/azchohfi/XamarinAndroid-Goldfinger</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>http://i.imgur.com/toKPCaB.png</PackageIconUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Images\icon.png" Pack="true" Visible="false" PackagePath=""/>
   </ItemGroup>
   <PropertyGroup>
     <DesignTimeBuild Condition=" '$(DesignTimeBuild)' == '' ">false</DesignTimeBuild>
-	<PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">./nupkg/</PackageOutputPath>
-	<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">./nupkg/</PackageOutputPath>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
     <ItemGroup>
@@ -69,7 +69,7 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\goldfinger-2.0.0-RC2.aar" />
+    <LibraryProjectZip Include="Jars\goldfinger-2.0.0.aar" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -77,31 +77,24 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <JavaSourceJar Include="Jars\goldfinger-2.0.0-RC2-sources.jar" />
+    <JavaSourceJar Include="Jars\goldfinger-2.0.0-sources.jar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>5.3.0</Version>
+      <Version>5.3.1</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.0.2-preview02</Version>
+      <Version>1.1.0-preview03</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Biometric">
+      <Version>1.0.0-preview03</Version>
+      <PrivateAssets>None</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Fragment">
-      <Version>1.0.0-preview02</Version>
+      <Version>1.1.0-preview03</Version>
     </PackageReference>
-    <!-- <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.3.0"> -->
-    <!-- <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets> -->
-    <!-- <PrivateAssets>all</PrivateAssets> -->
-    <!-- </PackageReference> -->
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AndroidX.Biometric\AndroidX.Biometric.csproj">
-      <Project>{79ecfb06-2cea-4a3c-97fb-029ade3976f0}</Project>
-      <Name>AndroidX.Biometric</Name>
-	  <IncludeAssets>AndroidX.Biometric.dll</IncludeAssets>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
