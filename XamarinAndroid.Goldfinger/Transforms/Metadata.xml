@@ -7,7 +7,11 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
   <attr path="/api/package[@name='co.infinum.goldfinger']" name="managedName">XamarinAndroid.Goldfinger</attr>
-  <!--<remove-node path="/api/package[@name='co.infinum.goldfinger']/class[@name='BiometricCallback.1]" />
-  <remove-node path="/api/package[@name='co.infinum.goldfinger']/class[@name='BiometricCallback.2]" />
-  <remove-node path="/api/package[@name='co.infinum.goldfinger']/class[@name='BiometricCallback.3]" />-->
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto']" name="managedName">XamarinAndroid.Goldfinger.Crypto</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto']/interface[@name='Crypter']" name="visibility">public</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto']/interface[@name='Factory']" name="visibility">public</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto.impl']/class[@name='AesCipherFactory']/method[@name='createDecryptionCrypter' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto.impl']/class[@name='AesCipherFactory']/method[@name='createEncryptionCrypter' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto.impl']/class[@name='Base64CipherCrypter']/method[@name='decrypt' and count(parameter)=2 and parameter[1][@type='javax.crypto.Cipher'] and parameter[2][@type='java.lang.String']]/parameter[@name='cipher']" name="managedType">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='co.infinum.goldfinger.crypto.impl']/class[@name='Base64CipherCrypter']/method[@name='encrypt' and count(parameter)=2 and parameter[1][@type='javax.crypto.Cipher'] and parameter[2][@type='java.lang.String']]/parameter[@name='cipher']" name="managedType">Java.Lang.Object</attr>
 </metadata>
