@@ -14,12 +14,12 @@
     <AssemblyName>Xamarin.Android.Goldfinger</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <PackageId>XamarinAndroid.Goldfinger</PackageId>
-    <Version>2.0.1</Version>
+    <Version>2.0.1.1</Version>
     <Authors>azchohfi</Authors>
     <PackageDescription>Xamarin Android Binding package for Infinum's Android Goldfinger, to simplify fingerprint authentication implementation.</PackageDescription>
     <PackageTags>xamarin;android;binding;infinum;goldfinger;fingerprint;auth;authentication</PackageTags>
@@ -69,7 +69,7 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\goldfinger-2.0.0.aar" />
+    <LibraryProjectZip Include="Jars\goldfinger-2.0.1.aar" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -77,23 +77,23 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <JavaSourceJar Include="Jars\goldfinger-2.0.0-sources.jar" />
+    <JavaSourceJar Include="Jars\goldfinger-2.0.1-sources.jar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>5.4.0</Version>
+      <Version>5.6.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.1.0</Version>
+      <Version>1.1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Biometric">
-      <Version>1.0.0</Version>
+      <Version>1.0.1.1</Version>
       <PrivateAssets>none</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Fragment">
-      <Version>1.1.0</Version>
+      <Version>1.2.4.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
